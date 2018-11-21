@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/color_a78150"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/recording_btn" />
+            <item android:state_pressed="true" android:drawable="@drawable/recording_btn_pressed" />
+            <item android:state_focused="true" android:drawable="@drawable/recording_btn_pressed" />
+            <item android:state_selected="true" android:drawable="@drawable/recording_btn_pressed" />
+        </selector>
+    </item>
+</ripple>

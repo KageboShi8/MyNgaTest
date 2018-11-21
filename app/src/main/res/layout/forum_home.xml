@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ctb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <!--<gov.pianzong.androidnga.view.CustomToolBar-->
+    <!--android:id="@id/layout_header"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--ctb:hasRightCommonBtn="true"-->
+    <!--ctb:hasShadow="false"-->
+    <!--ctb:headerRightCommonBtnSrc="@drawable/icon_search"-->
+    <!--ctb:titleText="@string/nga_forum" />-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/home_grade_rlyt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/nga_darker_common_bg">
+
+        <TextView
+            android:id="@+id/home_layout_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_10dp"
+            android:text="@string/nga_forum"
+            android:textColor="@color/color_white_selector"
+            android:textSize="@dimen/text_16" />
+
+        <ImageButton
+            android:id="@+id/home_search_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@color/transparent"
+            android:drawablePadding="7.0dip"
+            android:padding="5.0dip"
+            android:src="@drawable/icon_search"
+            android:text="@string/home_choice_strg"
+            android:textColor="@color/color_white_selector"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/forum_home_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/color_main_background">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/indicator"
+            style="@style/MyCustomTabLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:background="@color/color_titlebar_background"
+            ctb:tabIndicatorColor="@color/color_title_and_tab"
+            ctb:tabIndicatorHeight="3.0dip"
+            ctb:tabMinWidth="75.0dip"
+            ctb:tabMode="scrollable"
+            ctb:tabSelectedTextColor="@color/color_title_and_tab"
+            ctb:tabTextAppearance="@style/TabLayoutAppearance" />
+
+        <View
+            android:id="@id/shadow_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/color_filter_divider_line" />
+        <!--android:layout_below="@id/indicator"-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/shadow_line" />
+
+        <ViewStub
+            android:id="@id/error_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout="@layout/include_layout_error" />
+    </RelativeLayout>
+</LinearLayout>

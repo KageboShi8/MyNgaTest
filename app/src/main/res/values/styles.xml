@@ -1,0 +1,37 @@
+<resources>
+
+    <style name="Theme_NoTitleBarTranslucent" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Base.AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat" />
+
+    <style name="SplashApp" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/loading</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="NotTranslucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:animationDuration">0</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="@style/Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTextAppearance</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="@style/TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TabLayoutAppearance">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/color_unselect_tab</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+
+
+</resources>

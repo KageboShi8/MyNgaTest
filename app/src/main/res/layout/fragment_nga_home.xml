@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ctb="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/real_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/home_choice_llyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/nga_darker_common_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/home_layout_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_10dp"
+            android:text="@string/nga_recommend"
+            android:textColor="@color/color_white_selector"
+            android:textSize="@dimen/text_16" />
+
+        <TextView
+            android:id="@+id/home_choice_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/home_layout_header"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:drawablePadding="7.0dip"
+            android:padding="5.0dip"
+            android:text="@string/home_choice_strg"
+            android:textColor="@color/color_white_selector"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_choice_llyt">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/contentFlyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_choice_llyt" />
+
+    <View
+        android:id="@+id/shadow_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2.0dip"
+        android:layout_below="@id/home_choice_llyt"
+        android:background="@drawable/shadow_bottom_top_bar"
+        android:visibility="gone" />
+
+    <ViewStub
+        android:id="@+id/error_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout="@layout/include_layout_error" />
+</RelativeLayout>

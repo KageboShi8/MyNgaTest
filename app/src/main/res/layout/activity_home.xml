@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/nga_common_back_bg"
+    android:orientation="vertical">
+
+    <!--<View-->
+        <!--android:id="@+id/view_status_bar_place"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="25.0dip" />-->
+
+    <RelativeLayout
+        android:id="@+id/top_view_llyt"
+        android:layout_width="fill_parent"
+        android:layout_height="75.0dip"
+        android:background="@color/nga_darker_common_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/home_top_water_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/home_title_water" />
+        <!--其实要用circleview的　可以先用开源库的　再考虑自定义-->
+        <!--<gov.pianzong.androidnga.view.CircleImageView-->
+            <!--android:id="@+id/home_person_icon"-->
+            <!--android:layout_width="44.0dip"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginLeft="13.0dip"-->
+            <!--android:clickable="false"-->
+            <!--android:contentDescription="@string/avatar"-->
+            <!--android:longClickable="false"-->
+            <!--android:src="@drawable/user_default_icon_bg" />-->
+
+        <ImageView
+            android:id="@+id/home_person_icon"
+            android:layout_width="44.0dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13.0dip"
+            android:clickable="false"
+            android:contentDescription="@string/avatar"
+            android:longClickable="false"
+            android:src="@drawable/user_default_icon_bg"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_toRightOf="@id/home_person_icon"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/home_user_info_llyt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/home_user_nick_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="贝克汉姆"
+                    android:textColor="@color/color_white_selector"
+                    android:textSize="@dimen/text_17"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_lever_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/home_user_nick_tv"
+                    android:layout_marginLeft="@dimen/rec_tag_padding"
+                    android:layout_toRightOf="@id/home_user_nick_tv"
+                    android:background="@drawable/bg_font_border_tag"
+                    android:gravity="center"
+                    android:padding="3.0dip"
+                    android:singleLine="true"
+                    android:text="大师"
+                    android:textColor="@color/yellow_tag_color"
+                    android:textSize="@dimen/text_10" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/home_day_total_llyt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/total_day_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_day_strg"
+                    android:textColor="@color/color_white_selector"
+                    android:textSize="@dimen/text_12" />
+
+                <TextView
+                    android:id="@+id/continue_day_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:baselineAligned="false"
+                    android:text="@string/continue_day_strg"
+                    android:textColor="@color/color_white_selector"
+                    android:textSize="@dimen/text_12" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/row_right_bg" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/row_right_bg" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_notify_rlyt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dimen_13dp">
+
+            <ImageView
+                android:id="@+id/home_notify_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/home_notify_num_tv"
+                android:layout_marginLeft="@dimen/rec_right"
+                android:src="@drawable/login_msg_icon" />
+
+            <TextView
+                android:id="@+id/home_notify_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:background="@drawable/home_red_circle_border_tag"
+                android:gravity="center"
+                android:text="30"
+                android:textColor="@color/color_white_selector"
+                android:textSize="9.0sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/home_title_view_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/color_titlebar_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#ffffffff">
+
+            <FrameLayout
+                android:id="@+id/home_replace_flyt"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/home_rgp" />
+
+            <RadioGroup
+                android:id="@+id/home_rgp"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_faf0dc"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/home_page_rbtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="2.0dip"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/btn_homepage_selector"
+                    android:drawablePadding="2.0dip"
+                    android:gravity="center"
+                    android:text="@string/home_page_strg"
+                    android:textColor="@color/color_home_tab_selector"
+                    android:textSize="@dimen/text_12" />
+
+                <RadioButton
+                    android:id="@+id/home_recommend_rbtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2.0dip"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/btn_tab_recommend_selector"
+                    android:drawablePadding="2.0dip"
+                    android:gravity="center"
+                    android:text="@string/nga_recommend"
+                    android:textColor="@color/color_home_tab_selector"
+                    android:textSize="@dimen/text_12" />
+
+                <RadioButton
+                    android:id="@+id/home_active_rbtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2.0dip"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:clipChildren="true"
+                    android:gravity="bottom|center"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white_selector"
+                    android:textSize="@dimen/text_12" />
+
+                <RadioButton
+                    android:id="@+id/home_grade_rbtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2.0dip"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/btn_tab_grade_selector"
+                    android:drawablePadding="2.0dip"
+                    android:gravity="center"
+                    android:text="@string/grade"
+                    android:textColor="@color/color_home_tab_selector"
+                    android:textSize="@dimen/text_12" />
+
+                <RadioButton
+                    android:id="@+id/home_forum_rbtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:drawableTop="@drawable/btn_tab_forum_selector"
+                    android:drawablePadding="2.0dip"
+                    android:gravity="center"
+                    android:text="@string/nga_forum"
+                    android:textColor="@color/color_home_tab_selector"
+                    android:textSize="@dimen/text_12" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/home_azls_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5.0dip"
+                android:src="@drawable/azls_bottom_icon" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/draw_lv"
+            android:layout_width="280.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="start"
+            android:background="@color/color_drawer_listview_bg"
+            android:choiceMode="singleChoice"
+            android:divider="#33333333"
+            android:dividerHeight="0.0dip"
+            android:scrollbars="none" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/nga_common_back_bg">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loading" />
+    <!--android:layout_above="@id/ad_logo"-->
+    <TextView
+        android:id="@+id/skip_ad"
+        android:layout_width="10dp"
+        android:layout_height="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginRight="374dp"
+        android:layout_marginBottom="16.0dip"
+        android:background="@drawable/background_circle"
+        android:gravity="center"
+        android:text="@string/click_to_skip"
+        android:textColor="@android:color/white"
+        android:textSize="14.0sp"
+        android:visibility="gone" />
+</FrameLayout>
