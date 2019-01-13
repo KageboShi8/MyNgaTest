@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.kageboshi.myngatest.R;
@@ -33,7 +34,7 @@ import io.reactivex.schedulers.Schedulers;
 import static com.example.kageboshi.myngatest.Utils.Constants.DEBUG_TAG;
 
 
-public class    HomeFragment extends Fragment {
+public class    HomeFragment extends Fragment implements View.OnClickListener {
 
     private ImageView image_header;
     private RecyclerView recycler_topic;
@@ -42,6 +43,7 @@ public class    HomeFragment extends Fragment {
 
     private List<Drawable> galleryDrawableList = new ArrayList<Drawable>();
     private List<String> galleryNameList = new ArrayList<String>();
+    private ImageButton imageButton_refresh;
 
     @Nullable
     @Override
@@ -60,6 +62,8 @@ public class    HomeFragment extends Fragment {
         image_header = ((ImageView) view.findViewById(R.id.home_fragment_image));
         recycler_topic = ((RecyclerView) view.findViewById(R.id.home_fragment_topic_recycler));
         recycler_more_function = ((RecyclerView) view.findViewById(R.id.recycler_more_function));
+        imageButton_refresh = ((ImageButton) view.findViewById(R.id.home_fragement_topic_refreshButton));
+        imageButton_refresh.setOnClickListener(this);
     }
 
     private void initHttpData() {
@@ -130,4 +134,12 @@ public class    HomeFragment extends Fragment {
         galleryNameList.add(getString(R.string.home_setting_strg));
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.home_fragement_topic_refreshButton:
+                initHttpData();
+                break;
+        }
+    }
 }
